@@ -15,7 +15,7 @@ func timeTrack(start time.Time, name string) {
 }
 
 func readFile() []string {
-	fileName := "/Users/alex/main/advent-of-code/day1/challenge1-input.txt"
+	fileName := "/Users/alex/main/advent-of-code/Day 1/challenge1-input.txt"
 	fileBytes, err := ioutil.ReadFile(fileName)
 	if err != nil {
 		fmt.Println(err)

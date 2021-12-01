@@ -11,14 +11,14 @@ def readfile():
     return measures
 
 
-@timer('function:partone', unit='s')
+@timer('function:partone', unit='ms')
 def partone():
     depth_measures = readfile()
     num_increasing = len([x for x in range(1, len(depth_measures)) if depth_measures[x] - depth_measures[x - 1] > 0])
     return num_increasing
 
 
-@timer('function:parttwo', unit='s')
+@timer('function:parttwo', unit='ms')
 def parttwo():
     depth_measures = readfile()
     sliding_window = [np.sum([depth_measures[x], depth_measures[x + 1], depth_measures[x + 2]])
